@@ -14,31 +14,37 @@ Product cart[MAX_PRODUCTS];
 int cartCount = 0;
 
 void addProducts() {
-    if(cartCount >= MAX_PRODUCTS) {
+    char choice;
+
+    do {
+        if(cartCount >= MAX_PRODUCTS) {
         printf("\nCart is full! Cannot add more products.\n");
         return;
     }
 
-    Product product;
-    printf("\nLet's add some products to your cart! \n");
-    printf("\nEnter product name: ");
+    Product product; // variable to hold values.
+    printf("\n Enter product name: ");
     scanf("%s", product.name);
-    printf("Enter quantity: ");
+    printf("\n Enter quantity: ");
     scanf("%d", &product.quantity);
-    printf("Enter price per unit: ");
+    printf("\n Enter price per unit: ");
     scanf("%f", &product.price);
 
     cart[cartCount++] = product;
-    printf("\nProduct '%s' added to your cart successfully!\n", product.name);
+    printf("\n '%s' added to your cart successfully!\n", product.name);
+
+    printf("\n Do you want to add another product? (y/n): ");
+    scanf(" %c", &choice);
+    } while(choice == 'y' || choice == 'Y');
 }
 
 void displayProducts() {
     if(cartCount == 0) {
-        printf("\nYour cart is empty. Please add some products first. \n");
+        printf("\n Your cart is empty. Please add some products first. \n");
         return;
     }
 
-    printf("\nProducts in your cart:\n");
+    printf("\n Products in your cart:\n");
     printf("-------------------------------------------------\n");
     printf("| %-20s | %-10s | %-10s |\n", "Name", "Quantity", "Price");
     printf("-------------------------------------------------\n");
