@@ -9,11 +9,11 @@ void menu() {
     printf("We are here to make your shopping experience smooth and convenient.\n");
 
     do {
-        printf("1. Add Products to Cart\n");
-        printf("2. View Your Cart\n");
-        printf("3. Proceed to Checkout\n");
-        printf("4. Exit\n");
-        printf("Please select an option: ");
+        printf("\n 1. Add Products to Cart\n");
+        printf("\n 2. View Your Cart\n");
+        printf("\n 3. Proceed to Checkout\n");
+        printf("\n 4. Exit\n");
+        printf("\n Please select an option: ");
         scanf("%d", &choice);
 
         switch(choice) {
@@ -24,12 +24,14 @@ void menu() {
                 displayProducts();
                 break;
             case 3:
-                printf("\nYou are now checking out. Please review your bill. \n");
+                printf("\n You are now checking out. Please review your bill. \n");
                 // checkoutBill();
                 break;
             case 4:
-                printf("\nThank you for shopping with us! Have a great day! \n");
+                printf("\n Thank you for shopping with us! Have a great day! \n");
                 break;
+            default: 
+                printf("\n Invalid option selected, Please try again. \n");
         }
     }
     while(choice !=4); 
