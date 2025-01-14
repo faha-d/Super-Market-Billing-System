@@ -1,40 +1,43 @@
 #include <stdio.h>
-#include "./products/products.h"
+#include "./input/input.h"
+#include "./process/process.h"
+#include "./output/output.h"
 
 void menu() {
     int choice;
 
-    // Greeting User
     printf("\nWelcome to the Super Market Billing System!\n");
-    printf("We are here to make your shopping experience smooth and convenient.\n");
 
     do {
-        printf("\n 1. Add Products to Cart\n");
-        printf("\n 2. View Your Cart\n");
-        printf("\n 3. Proceed to Checkout\n");
-        printf("\n 4. Exit\n");
-        printf("\n Please select an option: ");
+        printf("\n=== Super Market Billing System ===\n");
+        printf("1. Enter Customer Details\n");
+        printf("2. Add Products to Cart\n");
+        printf("3. View Your Cart\n");
+        printf("4. Proceed to Checkout\n");
+        printf("5. Exit\n");
+        printf("Please select an option: ");
         scanf("%d", &choice);
 
-        switch(choice) {
+        switch (choice) {
             case 1:
-                addProducts();
+                inputCustomerDetails();
                 break;
             case 2:
-                displayProducts();
+                inputItems();
                 break;
             case 3:
-                printf("\n You are now checking out. Please review your bill. \n");
-                // checkoutBill();
+                displayCart();
                 break;
             case 4:
-                printf("\n Thank you for shopping with us! Have a great day! \n");
+                generateBill();
                 break;
-            default: 
-                printf("\n Invalid option selected, Please try again. \n");
+            case 5:
+                printf("\nThank you for shopping with us! Goodbye.\n");
+                break;
+            default:
+                printf("\nInvalid choice. Please try again.\n");
         }
-    }
-    while(choice !=4); 
+    } while (choice != 5);
 }
 
 int main() {
