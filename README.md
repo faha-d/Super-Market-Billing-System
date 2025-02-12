@@ -23,8 +23,8 @@ The **Supermarket Billing System** is a C-based application designed to manage b
 ## Installation  
 1. Clone this repository:  
    ```sh
-   git clone https://github.com/your-repository/supermarket-billing.git
-   cd supermarket-billing
+   git clone https://github.com/your-account-name/Super-Market-Billing-System.git
+   cd Super-Market-Billing-System
    ```
 2. Compile and execute the program as described in the **How to Use** section.
 
@@ -35,3 +35,4 @@ The **Supermarket Billing System** is a C-based application designed to manage b
 
 ## License  
 This project is open-source and available under the **MIT License**.
+For more details, visit the repository: <a href="https://github.com/faha-d/Super-Market-Billing-System.git" target="_blank"> Super Market Billing System </a>
