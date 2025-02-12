@@ -16,8 +16,9 @@ The **Supermarket Billing System** is a C-based application designed to manage b
 - **Data Structures**: Arrays and structures for efficient data management
 
 ## How to Use  
-1. Compile the program using `gcc supermarket_billing.c -o billing` (if using GCC).
-2. Run the program using `./billing`.
+1. Compile the program using `gcc main.c process/*.c utils/*.c input/*.c output/*.c -o supermarket
+` (if using GCC).
+2. Run the program using `./supermarket`.
 3. Follow the on-screen instructions to add products, generate invoices, and manage transactions.
 
 ## Installation  
